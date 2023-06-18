@@ -6,6 +6,9 @@ import java.util.List;
 
 public class TestFeline {
 
+    private int numberOfCats = 1;
+    private int numberOfMethodInvokes = 1;
+
     private Feline feline = new Feline();
 
     @Test
@@ -22,11 +25,11 @@ public class TestFeline {
 
     @Test
     public void testGetKittensWithNoParams() {
-        Assert.assertEquals(1, feline.getKittens());
+        Assert.assertEquals(numberOfMethodInvokes, feline.getKittens());
     }
 
     @Test
     public void testGetKittensWithParams() {
-        Assert.assertEquals(1, feline.getKittens(1));
+        Assert.assertEquals(numberOfCats, feline.getKittens(numberOfCats));
     }
 }
